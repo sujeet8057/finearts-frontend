@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="assets/css/styles.css"> 
+      
+    <title>SONI FINEARTS</title>
+</head>
+
+<body>
+    <div id="toast" class="toast"></div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> soni finearts
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="#faqs" class="nav__link">FAQs</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
+
+                     <!-- ADMIN LINK -->
+    <li class="nav__item" id="admin-link" style="display:none;">
+        <a href="admin.html" class="nav__link">Admin</a>
+    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                   <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <img src="assets/images/Shiva.jpg" alt="" class="home__img">
+
+                <div class="home__data">
+                    <h1 class="home__title">Explore the Elegance of Godly Creations</h1>
+                    <p class="home__description">
+                         Step into the world of Sonifinearts, where art meets spirituality. Explore exquisite sculptures
+                        of gods and goddesses, each crafted with devotion, skill, and a deep respect for tradition.
+                        Every piece reflects cultural heritage, artistic excellence, and the timeless beauty of divine
+                        expression.
+                    </p>
+                    <a href="#about" class="button button--flex">
+                        Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about section container" id="about">
+            <div class="about__container grid">
+                <img src="assets/images/krishna.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">Who we really are & why choose us</h2>
+                    <p class="about__description">
+                        At Sonifinearts, we bring the beauty of divine sculptures to life with unmatched craftsmanship
+                        and devotion. Visitors trust the quality and authenticity of our creations, and we guide you in
+                        caring for each piece to ensure it lasts a lifetime. Every sculpture is handled with care and
+                        delivered on time, making your experience with Sonifinearts truly memorable.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="product section container" id="products">
+            <h2 class="section__title-center">Check out our products</h2>
+            <p class="product__description">
+                Explore our divine handcrafted sculptures.
+            </p>
+
+            <div class="product__container grid" id="product-container">
+                <!-- Products will load dynamically from backend -->
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="questions section" id="faqs">
+    <h2 class="section__title-center questions__title container">
+        Some common questions were often asked
+    </h2>
+
+    <div class="questions__container container grid">
+        
+        <div class="questions__group">
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">Are the sculptures handcrafted?</h3>
+                </header>
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Yes, every sculpture is handcrafted by skilled artisans, reflecting traditional artistry and attention to detail.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">Can I place a custom order?</h3>
+                </header>
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Absolutely! We accept custom orders and can create sculptures according to your specifications, size, or design preferences.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">Can I gift a sculpture to someone?</h3>
+                </header>
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Definitely! Our sculptures make meaningful gifts for weddings, housewarmings, and spiritual occasions.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="questions__group">
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">Can I place an order online?</h3>
+                </header>
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Yes, you can browse and order our sculptures online, with safe payment and delivery options.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">Can I see the sculptures before buying?</h3>
+                </header>
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Yes, our physical store allows visitors to view and experience the sculptures firsthand.
+                    </p>
+                </div>
+            </div>
+
+            <div class="questions__item">
+                <header class="questions__header">
+                    <i class="ri-add-line questions__icon"></i>
+                    <h3 class="questions__item-title">Are your products eco-friendly?</h3>
+                </header>
+                <div class="questions__content">
+                    <p class="questions__description">
+                        Yes, we prioritize sustainable materials and practices whenever possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- CONTACT -->
+        
+<section class="contact section container" id="contact">
+  <div class="contact__container grid">
+
+    <div class="contact__box">
+      <h2 class="section__title">Reach out to us today</h2>
+    </div>
+
+    <form class="contact__form" id="contact-form">
+      <div class="contact__inputs">
+
+        <div class="contact__content">
+          <input type="email" id="email" placeholder=" " class="contact__input" required>
+          <label class="contact__label">Email</label>
+        </div>
+
+        <div class="contact__content">
+          <input type="text" id="subject" placeholder=" " class="contact__input" required>
+          <label class="contact__label">Subject</label>
+        </div>
+
+        <div class="contact__content contact__area">
+          <textarea id="message" placeholder=" " class="contact__input" required></textarea>
+          <label class="contact__label">Message</label>
+        </div>
+
+      </div>
+
+      <button type="submit" class="button button--flex">
+        Send Message
+      </button>
+
+      <!-- Response Message -->
+      <p id="contact-response" style="margin-top:10px; color:green;"></p>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <!-- /*======================footer============*/ -->
+
+ <footer class="footer section">
+  <div class="footer__container container grid">
+    <div class="footer__content">
+      <h3 class="footer__title">Subscribe to our newsletter</h3>
+
+      <div class="footer__subscribe">
+        <input type="email" id="subscriber-email" placeholder="Enter your email" class="footer__input" required>
+
+        <button id="subscribe-btn" class="button button--flex footer__button">
+          Subscribe
+        </button>
+      </div>
+
+      <!-- Response Message -->
+      <p id="subscribe-response" style="margin-top:10px; color:green;"></p>
+    </div>
+  </div>
+</footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!-- JS -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

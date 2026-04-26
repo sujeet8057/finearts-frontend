@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!-- <link rel="stylesheet" href="admin.css"> -->
+   <link rel="stylesheet" href="adminTest.css"> <!--teal green-->
+    <!-- <link rel="stylesheet" href="claudeadmin.css"> -->
+</head>
+<body>
+
+  <!-- LOGIN SECTION -->
+  <div id="login-container" class="login-container show">
+    <div class="login-box">
+      <h1>Admin Login</h1>
+      <p class="login-subtitle">Soni Finearts Admin Panel</p>
+      
+      <form id="login-form">
+        <div class="form-group">
+          <label for="admin-email">Email</label>
+          <input type="email" id="admin-email" placeholder="admin@example.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="admin-password">Password</label>
+          <input type="password" id="admin-password" placeholder="Enter password" required>
+        </div>
+        
+        <button type="submit" class="btn-login">Login</button>
+        <p id="login-error" class="error-message"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div id="dashboard-container" class="dashboard-container">
+    <header class="admin-header">
+      <div class="header-left">
+        <h1>Admin Product Dashboard</h1>
+        <p class="header-subtitle">Manage your products</p>
+      </div>
+      <div class="header-right">
+        <span id="admin-name" class="admin-name"></span>
+        <button id="logout-btn" class="btn-logout">Logout</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- PRODUCT FORM -->
+      <section class="form-section">
+        <h2>Add/Edit Product</h2>
+        <form id="product-form" enctype="multipart/form-data">
+          <input type="hidden" id="product-id">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Product Name</label>
+              <input type="text" id="name" placeholder="Enter product name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="price">Price (₹)</label>
+              <input type="number" id="price" placeholder="Enter price" step="0.01" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="image">Product Image</label>
+              <input type="file" id="image" accept="image/*">
+              <small>Upload an image for the product</small>
+            </div>
+            
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" id="description" placeholder="Brief product description">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit">Save Product</button>
+          <button type="button" id="reset-form-btn" class="btn-reset">Clear Form</button>
+        </form>
+      </section>
+
+      <!-- PRODUCT LIST -->
+      <section class="list-section">
+        <h2>Products List</h2>
+        <div id="loading" class="loading-spinner"></div>
+        <div id="product-list" class="product-list"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

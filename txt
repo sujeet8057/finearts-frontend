@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>SONI FINEARTS</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> soni finearts
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Products</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#faqs" class="nav__link">FAQs</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <img src="assets/images/Shiva.jpg" alt="" class="home__img">
+
+                <div class="home__data">
+                    <h1 class="home__title">
+
+                        Explore the Elegance of Godly Creations
+                    </h1>
+                    <p class="home__description">
+                        Step into the world of Sonifinearts, where art meets spirituality. Explore exquisite sculptures
+                        of gods and goddesses, each crafted with devotion, skill, and a deep respect for tradition.
+                        Every piece reflects cultural heritage, artistic excellence, and the timeless beauty of divine
+                        expression.
+                    </p>
+                    <a href="#about" class="button button--flex">
+                        Explore <i class="ri-arrow-right-down-line button__icon"></i>
+                    </a>
+                </div>
+
+                <div class="home__social">
+                    <span class="home__social-follow">Follow Us</span>
+
+                    <div class="home__social-links">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section container" id="about">
+            <div class="about__container grid">
+                <img src="assets/images/krishna.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <h2 class="section__title about__title">
+                        Who we really are & <br> why choose us
+                    </h2>
+
+                    <p class="about__description">
+                        At Sonifinearts, we bring the beauty of divine sculptures to life with unmatched craftsmanship
+                        and devotion. Visitors trust the quality and authenticity of our creations, and we guide you in
+                        caring for each piece to ensure it lasts a lifetime. Every sculpture is handled with care and
+                        delivered on time, making your experience with Sonifinearts truly memorable.
+                    </p>
+
+                    <div class="about__details">
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Expertly crafted sculptures of gods and goddesses with attention to detail.
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Our visitors appreciate the quality, craftsmanship, and authenticity of every piece.
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            We ensure timely delivery and careful handling of every sculpture.
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-checkbox-fill about__details-icon"></i>
+                            Your satisfaction is our priority — we stand by the quality and beauty of every sculpture.
+                        </p>
+                    </div>
+
+                    <a href="#" class="button--link button--flex">
+                        Shop Now <i class="ri-arrow-right-down-line button__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== STEPS ====================-->
+        <section class="steps section container">
+            <div class="steps__bg">
+                <h2 class="section__title-center steps__title">
+                    Place Your Order
+                </h2>
+
+                <div class="steps__container grid">
+                    <div class="steps__card">
+                        <div class="steps__card-number">01</div>
+                        <h3 class="steps__card-title">Choose Idol</h3>
+                        <p class="steps__card-description">
+                            Add the idol to your cart
+                        </p>
+                    </div>
+
+                    <div class="steps__card">
+                        <div class="steps__card-number">02</div>
+                        <h3 class="steps__card-title">Place an order</h3>
+                        <p class="steps__card-description">
+                            Once your product is added to cart, complete the checkout with your details.
+                        </p>
+                    </div>
+
+                    <div class="steps__card">
+                        <div class="steps__card-number">03</div>
+                        <h3 class="steps__card-title">Receive & Enjoy</h3>
+                        <p class="steps__card-description">
+                            We carefully deliver your sculpture to your doorstep, ready to inspire and beautify your
+                            space./
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PRODUCTS ====================-->
+        <section class="product section container" id="products">
+            <h2 class="section__title-center">
+                Check out our <br> products
+            </h2>
+
+            <p class="product__description">
+                Each sculpture is a masterpiece of devotion and craftsmanship. From stone to wood and metal, our
+                collection captures the beauty and essence of gods and goddesses, perfect for your home, temple, or as a
+                meaningful gift. Explore and experience the artistry today.
+            </p>
+
+            <div class="product__container grid">
+                <article class="product__card">
+                    <div class="product__circle"></div>
+                      <a href="assets/images/product-7.jpeg" target="_blank">
+                    <img src="assets/images/product-7.jpeg" alt="" class="product__img">
+                        </a>
+                    <h3 class="product__title">Divine Shivling Symbol of Creation</h3>
+                    <span class="product__price">&#8377; 350</span>
+
+                   
+                </article>
+
+                <article class="product__card">
+                    <div class="product__circle"></div>
+                    <a href="assets/images/product-2.jpeg" target="_blank">
+                    <img src="assets/images/product-2.jpeg" alt="" class="product__img">
+                     </a>
+                    <h3 class="product__title">Shivling with Trishul and Nandi</h3>
+                    <span class="product__price">&#8377; 2100</span>
+
+                   
+                </article>
+
+                <article class="product__card">
+                    <div class="product__circle"></div>
+
+
+                    <a href="assets/images/product-3.jpeg" target="_blank">
+                        <img src="assets/images/product-3.jpeg" alt="Product" class="product__img">
+                    </a>
+                    <h3 class="product__title">Shivling and Nandi Devotion</h3>
+                    <span class="product__price">&#8377; 1200</span>
+
+                   
+                </article>
+
+                <article class="product__card">
+                    <div class="product__circle"></div>
+                       <a href="assets/images/product-4.jpeg" target="_blank">
+                    <img src="assets/images/product-4.jpeg" alt="" class="product__img">
+                      </a>
+                    <h3 class="product__title">White Marble Base Sacred Shivling</h3>
+                    <span class="product__price">&#8377; 350</span>
+
+                   
+                </article>
+
+                <article class="product__card">
+                    <div class="product__circle"></div>
+                      <a href="assets/images/product-5.jpeg" target="_blank">
+                    <img src="assets/images/product-5.jpeg" alt="" class="product__img">
+                       </a>
+                    <h3 class="product__title">Sacred Shivling of Lord Shiva</h3>
+                    <span class="product__price">&#8377; 350</span>
+
+                   
+                </article>
+
+                <article class="product__card">
+                    <div class="product__circle"></div>
+                       <a href="assets/images/product-6.jpeg" target="_blank">
+                    <img src="assets/images/product-6.jpeg" alt="" class="product__img">
+                      </a>
+                    <h3 class="product__title">Sacred Shivling and Nandi</h3>
+                    <span class="product__price">&#8377; 600</span>
+
+                   
+                </article>
+            </div>
+        </section>
+
+        <!--==================== QUESTIONS ====================-->
+        <section class="questions section" id="faqs">
+            <h2 class="section__title-center questions__title container">
+                Some common questions <br> were often asked
+            </h2>
+
+            <div class="questions__container container grid">
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Are the sculptures handcrafted?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, every sculpture is handcrafted by skilled artisans, reflecting traditional artistry
+                                and attention to detail.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Can I place a custom order?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Absolutely! We accept custom orders and can create sculptures according to your
+                                specifications, size, or design preferences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Can I gift a sculpture to someone?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Definitely! Our sculptures make meaningful gifts for weddings, housewarmings, and
+                                spiritual occasions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Can I place an order online?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, you can browse and order our sculptures online, with safe payment and delivery
+                                options.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Can I see the sculptures before buying?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, our physical store allows visitors to view and experience the sculptures firsthand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">
+                                Are your products eco-friendly?
+                            </h3>
+                        </header>
+
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, we prioritize sustainable materials and practices whenever possible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT ====================-->
+        <section class="contact section container" id="contact">
+            <div class="contact__container grid">
+                <div class="contact__box">
+                    <h2 class="section__title">
+                        Reach out to us today <br> via any of the given <br> information
+                    </h2>
+
+                    <div class="contact__data">
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">Call us for more details</h3>
+                            <span class="contact__description">
+                                <i class="ri-phone-line contact__icon"></i>
+                                9179083541
+                            </span>
+                        </div>
+
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">Write us by mail</h3>
+                            <span class="contact__description">
+                                <i class="ri-mail-line contact__icon"></i>
+                                abhaysoni3443@gmail.com
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <div class="contact__content">
+                            <input type="email" placeholder=" " class="contact__input">
+                            <label for="" class="contact__label">Email</label>
+                        </div>
+
+                        <div class="contact__content">
+                            <input type="text" placeholder=" " class="contact__input">
+                            <label for="" class="contact__label">Subject</label>
+                        </div>
+
+                        <div class="contact__content contact__area">
+                            <textarea name="message" placeholder=" " class="contact__input"></textarea>
+                            <label for="" class="contact__label">Message</label>
+                        </div>
+                    </div>
+
+                    <button class="button button--flex">
+                        Send Message
+                        <i class="ri-arrow-right-up-line button__icon"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="ri-leaf-line footer__logo-icon"></i> soni finearts
+                </a>
+
+                <h3 class="footer__title">
+                    Subscribe to our newsletter <br> to stay update
+                </h3>
+
+                <div class="footer__subscribe">
+                    <input type="email" placeholder="Enter your email" class="footer__input">
+
+                    <button class="button button--flex footer__button">
+                        Subscribe
+                        <i class="ri-arrow-right-up-line button__icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Our Address</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information"> Infront of </li>
+                    <li class="footer__information">Shri Ram Janki Mandir</li>
+                    <li class="footer__information">Gwarighat, Jabalpur</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Contact Us</h3>
+
+                <ul class="footer__data">
+                    <li class="footer__information"> 9179083541</li>
+
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/soni_fine_arts_?igsh=MWZrczBvYjZmaGxnbg==" target="_blank"
+                            class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://twitter.com/" class="footer__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">
+                    We accept all credit cards
+                </h3>
+
+                <div class="footer__cards">
+                    <img src="assets/images/card1.png" alt="" class="footer__card">
+                    <img src="assets/images/card2.png" alt="" class="footer__card">
+                    <img src="assets/images/card3.png" alt="" class="footer__card">
+                    <img src="assets/images/card4.png" alt="" class="footer__card">
+                </div>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; All rigths reserved</p>
+    </footer>
+
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
