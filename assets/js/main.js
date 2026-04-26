@@ -723,7 +723,7 @@
 
 
 /*==========Backend url==========*/
-const Backend_URL = "https://finearts-backend-production.up.railway.app/";
+const Backend_URL = "https://finearts-backend-production.up.railway.app";
 
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
