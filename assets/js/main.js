@@ -943,9 +943,11 @@ async function loadProducts() {
         }
 
         products.forEach(product => {
-            const imageUrl = product.imageUrl
-                ? `${Backend_URL}${product.imageUrl}`
-                : "https://via.placeholder.com/300?text=No+Image";
+           const imageUrl = product.imageUrl
+    ? product.imageUrl.startsWith('http')
+        ? product.imageUrl
+        : `${Backend_URL}${product.imageUrl}`
+    : "https://via.placeholder.com/300?text=No+Image";
 
             const productCard = document.createElement("article");
             productCard.classList.add("product__card");
