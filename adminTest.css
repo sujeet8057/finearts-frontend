@@ -145,10 +145,14 @@ body {
   border-radius: var(--radius-md);
   font-size: 1rem;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   transition: var(--transition);
   backdrop-filter: blur(10px);
-  color: var(--title-color);
+  color: #111111;
+}
+
+#login-form input::placeholder {
+  color: hsl(152, 4%, 55%);
 }
 
 #login-form input:focus {
@@ -156,6 +160,8 @@ body {
   border-color: var(--first-color);
   box-shadow: 0 0 0 4px hsl(152, 24%, 32%, 0.15);
   transform: translateY(-1px);
+  background: rgba(255, 255, 255, 1);
+  color: #111111;
 }
 
 .btn-login {
@@ -377,23 +383,34 @@ body {
   gap: 6px;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea,
+.form-group select {
   padding: 16px 20px;
   border: 2px solid var(--border-light);
   border-radius: var(--radius-md);
   font-size: 1rem;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   transition: var(--transition);
   backdrop-filter: blur(10px);
-  color: var(--title-color);
+  color: #111111;
 }
 
-.form-group input:focus {
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: hsl(152, 4%, 55%);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--first-color);
   box-shadow: 0 0 0 4px hsl(152, 24%, 32%, 0.15);
   transform: translateY(-1px);
+  background: rgba(255, 255, 255, 1);
+  color: #111111;
 }
 
 .form-group small {
@@ -820,6 +837,30 @@ body {
 
   .product-card {
     background: linear-gradient(145deg, hsl(152, 20%, 14%), hsl(152, 20%, 18%));
+  }
+
+  /* Force inputs to always be light with dark text */
+  #login-form input,
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #111111 !important;
+    border-color: hsl(152, 24%, 60%) !important;
+  }
+
+  #login-form input::placeholder,
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: hsl(152, 4%, 45%) !important;
+  }
+
+  #login-form input:focus,
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    background: rgba(255, 255, 255, 1) !important;
+    color: #111111 !important;
   }
 }
 
