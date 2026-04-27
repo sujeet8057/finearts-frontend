@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    
-     <link rel="stylesheet" href="assets/css/styles.css"> 
-      
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
     <title>SONI FINEARTS</title>
 </head>
 
 <body>
     <div id="toast" class="toast"></div>
+
     <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
@@ -28,10 +28,10 @@
                     <li class="nav__item"><a href="#faqs" class="nav__link">FAQs</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
 
-                     <!-- ADMIN LINK -->
-    <li class="nav__item" id="admin-link" style="display:none;">
-        <a href="admin.html" class="nav__link">Admin</a>
-    </li>
+                    <!-- ADMIN LINK -->
+                    <li class="nav__item" id="admin-link" style="display:none;">
+                        <a href="admin.html" class="nav__link">Admin</a>
+                    </li>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -41,8 +41,22 @@
 
             <div class="nav__btns">
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <!-- AUTH BUTTON -->
+                <div id="auth-nav-area">
+                    <button class="button button--flex auth-nav-btn" id="open-login-btn" onclick="openAuthModal('login')">
+                        <i class="ri-user-line"></i> Login
+                    </button>
+                    <div class="user-nav-info" id="user-nav-info" style="display:none;">
+                        <span class="user-greeting" id="user-greeting"></span>
+                        <button class="button button--flex auth-nav-btn logout-btn" onclick="logoutUser()">
+                            <i class="ri-logout-box-line"></i> Logout
+                        </button>
+                    </div>
+                </div>
+
                 <div class="nav__toggle" id="nav-toggle">
-                   <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    <i class="ri-menu-line"></i>
                 </div>
             </div>
         </nav>
@@ -58,7 +72,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Explore the Elegance of Godly Creations</h1>
                     <p class="home__description">
-                         Step into the world of Sonifinearts, where art meets spirituality. Explore exquisite sculptures
+                        Step into the world of Sonifinearts, where art meets spirituality. Explore exquisite sculptures
                         of gods and goddesses, each crafted with devotion, skill, and a deep respect for tradition.
                         Every piece reflects cultural heritage, artistic excellence, and the timeless beauty of divine
                         expression.
@@ -101,159 +115,240 @@
 
         <!-- FAQ -->
         <section class="questions section" id="faqs">
-    <h2 class="section__title-center questions__title container">
-        Some common questions were often asked
-    </h2>
+            <h2 class="section__title-center questions__title container">
+                Some common questions were often asked
+            </h2>
 
-    <div class="questions__container container grid">
-        
-        <div class="questions__group">
-            <div class="questions__item">
-                <header class="questions__header">
-                    <i class="ri-add-line questions__icon"></i>
-                    <h3 class="questions__item-title">Are the sculptures handcrafted?</h3>
-                </header>
-                <div class="questions__content">
-                    <p class="questions__description">
-                        Yes, every sculpture is handcrafted by skilled artisans, reflecting traditional artistry and attention to detail.
-                    </p>
+            <div class="questions__container container grid">
+
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">Are the sculptures handcrafted?</h3>
+                        </header>
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, every sculpture is handcrafted by skilled artisans, reflecting traditional artistry and attention to detail.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">Can I place a custom order?</h3>
+                        </header>
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Absolutely! We accept custom orders and can create sculptures according to your specifications, size, or design preferences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">Can I gift a sculpture to someone?</h3>
+                        </header>
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Definitely! Our sculptures make meaningful gifts for weddings, housewarmings, and spiritual occasions.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="questions__item">
-                <header class="questions__header">
-                    <i class="ri-add-line questions__icon"></i>
-                    <h3 class="questions__item-title">Can I place a custom order?</h3>
-                </header>
-                <div class="questions__content">
-                    <p class="questions__description">
-                        Absolutely! We accept custom orders and can create sculptures according to your specifications, size, or design preferences.
-                    </p>
+                <div class="questions__group">
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">Can I place an order online?</h3>
+                        </header>
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, you can browse and order our sculptures online, with safe payment and delivery options.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">Can I see the sculptures before buying?</h3>
+                        </header>
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, our physical store allows visitors to view and experience the sculptures firsthand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <header class="questions__header">
+                            <i class="ri-add-line questions__icon"></i>
+                            <h3 class="questions__item-title">Are your products eco-friendly?</h3>
+                        </header>
+                        <div class="questions__content">
+                            <p class="questions__description">
+                                Yes, we prioritize sustainable materials and practices whenever possible.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="questions__item">
-                <header class="questions__header">
-                    <i class="ri-add-line questions__icon"></i>
-                    <h3 class="questions__item-title">Can I gift a sculpture to someone?</h3>
-                </header>
-                <div class="questions__content">
-                    <p class="questions__description">
-                        Definitely! Our sculptures make meaningful gifts for weddings, housewarmings, and spiritual occasions.
-                    </p>
-                </div>
             </div>
-        </div>
-
-        <div class="questions__group">
-            <div class="questions__item">
-                <header class="questions__header">
-                    <i class="ri-add-line questions__icon"></i>
-                    <h3 class="questions__item-title">Can I place an order online?</h3>
-                </header>
-                <div class="questions__content">
-                    <p class="questions__description">
-                        Yes, you can browse and order our sculptures online, with safe payment and delivery options.
-                    </p>
-                </div>
-            </div>
-
-            <div class="questions__item">
-                <header class="questions__header">
-                    <i class="ri-add-line questions__icon"></i>
-                    <h3 class="questions__item-title">Can I see the sculptures before buying?</h3>
-                </header>
-                <div class="questions__content">
-                    <p class="questions__description">
-                        Yes, our physical store allows visitors to view and experience the sculptures firsthand.
-                    </p>
-                </div>
-            </div>
-
-            <div class="questions__item">
-                <header class="questions__header">
-                    <i class="ri-add-line questions__icon"></i>
-                    <h3 class="questions__item-title">Are your products eco-friendly?</h3>
-                </header>
-                <div class="questions__content">
-                    <p class="questions__description">
-                        Yes, we prioritize sustainable materials and practices whenever possible.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <!-- CONTACT -->
-        
-<section class="contact section container" id="contact">
-  <div class="contact__container grid">
+        <section class="contact section container" id="contact">
+            <div class="contact__container grid">
 
-    <div class="contact__box">
-      <h2 class="section__title">Reach out to us today</h2>
-    </div>
+                <div class="contact__box">
+                    <h2 class="section__title">Reach out to us today</h2>
+                </div>
 
-    <form class="contact__form" id="contact-form">
-      <div class="contact__inputs">
+                <form class="contact__form" id="contact-form">
+                    <div class="contact__inputs">
 
-        <div class="contact__content">
-          <input type="email" id="email" placeholder=" " class="contact__input" required>
-          <label class="contact__label">Email</label>
-        </div>
+                        <div class="contact__content">
+                            <input type="email" id="email" placeholder=" " class="contact__input" required>
+                            <label class="contact__label">Email</label>
+                        </div>
 
-        <div class="contact__content">
-          <input type="text" id="subject" placeholder=" " class="contact__input" required>
-          <label class="contact__label">Subject</label>
-        </div>
+                        <div class="contact__content">
+                            <input type="text" id="subject" placeholder=" " class="contact__input" required>
+                            <label class="contact__label">Subject</label>
+                        </div>
 
-        <div class="contact__content contact__area">
-          <textarea id="message" placeholder=" " class="contact__input" required></textarea>
-          <label class="contact__label">Message</label>
-        </div>
+                        <div class="contact__content contact__area">
+                            <textarea id="message" placeholder=" " class="contact__input" required></textarea>
+                            <label class="contact__label">Message</label>
+                        </div>
 
-      </div>
+                    </div>
 
-      <button type="submit" class="button button--flex">
-        Send Message
-      </button>
+                    <button type="submit" class="button button--flex">
+                        Send Message
+                    </button>
 
-      <!-- Response Message -->
-      <p id="contact-response" style="margin-top:10px; color:green;"></p>
-    </form>
-  </div>
-</section>
+                    <p id="contact-response" style="margin-top:10px; color:green;"></p>
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <!-- /*======================footer============*/ -->
+    <!-- FOOTER -->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <h3 class="footer__title">Subscribe to our newsletter</h3>
 
- <footer class="footer section">
-  <div class="footer__container container grid">
-    <div class="footer__content">
-      <h3 class="footer__title">Subscribe to our newsletter</h3>
+                <div class="footer__subscribe">
+                    <input type="email" id="subscriber-email" placeholder="Enter your email" class="footer__input" required>
+                    <button id="subscribe-btn" class="button button--flex footer__button">
+                        Subscribe
+                    </button>
+                </div>
 
-      <div class="footer__subscribe">
-        <input type="email" id="subscriber-email" placeholder="Enter your email" class="footer__input" required>
-
-        <button id="subscribe-btn" class="button button--flex footer__button">
-          Subscribe
-        </button>
-      </div>
-
-      <!-- Response Message -->
-      <p id="subscribe-response" style="margin-top:10px; color:green;"></p>
-    </div>
-  </div>
-</footer>
+                <p id="subscribe-response" style="margin-top:10px; color:green;"></p>
+            </div>
+        </div>
+    </footer>
 
     <!-- SCROLL UP -->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
 
+    <!-- AUTH OVERLAY -->
+    <div class="auth-overlay" id="auth-overlay" onclick="closeAuthModal()"></div>
+
+    <!-- AUTH MODAL -->
+    <div class="auth-modal" id="auth-modal" role="dialog" aria-modal="true" aria-label="Authentication">
+        <button class="auth-modal__close" onclick="closeAuthModal()" aria-label="Close">
+            <i class="ri-close-line"></i>
+        </button>
+
+        <!-- Tabs -->
+        <div class="auth-modal__tabs">
+            <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Login</button>
+            <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">Sign Up</button>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <div class="auth-form" id="form-login">
+            <div class="auth-modal__header">
+                <i class="ri-user-line auth-modal__icon"></i>
+                <h2 class="auth-modal__title">Welcome Back</h2>
+                <p class="auth-modal__subtitle">Sign in to your account</p>
+            </div>
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <div class="auth-field">
+                    <input type="email" id="login-email" class="auth-input" placeholder=" " required>
+                    <label class="auth-label">Email Address</label>
+                </div>
+                <div class="auth-field">
+                    <input type="password" id="login-password" class="auth-input" placeholder=" " required>
+                    <label class="auth-label">Password</label>
+                    <button type="button" class="auth-eye" onclick="togglePassword('login-password', this)" tabindex="-1">
+                        <i class="ri-eye-off-line"></i>
+                    </button>
+                </div>
+                <p class="auth-error" id="login-error"></p>
+                <button type="submit" class="button button--flex auth-submit" id="login-btn">
+                    <span>Sign In</span>
+                    <i class="ri-arrow-right-line button__icon"></i>
+                </button>
+            </form>
+            <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('signup'); return false;">Sign Up</a></p>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <div class="auth-form" id="form-signup" style="display:none;">
+            <div class="auth-modal__header">
+                <i class="ri-user-add-line auth-modal__icon"></i>
+                <h2 class="auth-modal__title">Create Account</h2>
+                <p class="auth-modal__subtitle">Join Soni Finearts today</p>
+            </div>
+            <form id="signup-form" onsubmit="handleSignup(event)">
+                <div class="auth-field">
+                    <input type="text" id="signup-name" class="auth-input" placeholder=" " required>
+                    <label class="auth-label">Full Name</label>
+                </div>
+                <div class="auth-field">
+                    <input type="email" id="signup-email" class="auth-input" placeholder=" " required>
+                    <label class="auth-label">Email Address</label>
+                </div>
+                <div class="auth-field">
+                    <input type="password" id="signup-password" class="auth-input" placeholder=" " required minlength="6">
+                    <label class="auth-label">Password</label>
+                    <button type="button" class="auth-eye" onclick="togglePassword('signup-password', this)" tabindex="-1">
+                        <i class="ri-eye-off-line"></i>
+                    </button>
+                </div>
+                <div class="auth-field">
+                    <input type="password" id="signup-confirm" class="auth-input" placeholder=" " required minlength="6">
+                    <label class="auth-label">Confirm Password</label>
+                    <button type="button" class="auth-eye" onclick="togglePassword('signup-confirm', this)" tabindex="-1">
+                        <i class="ri-eye-off-line"></i>
+                    </button>
+                </div>
+                <p class="auth-error" id="signup-error"></p>
+                <button type="submit" class="button button--flex auth-submit" id="signup-btn">
+                    <span>Create Account</span>
+                    <i class="ri-arrow-right-line button__icon"></i>
+                </button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login'); return false;">Sign In</a></p>
+        </div>
+    </div>
+
     <!-- JS -->
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,270 @@
+/*=============== AUTH NAV BUTTON ===============*/
+.auth-nav-btn {
+    padding: .5rem 1rem;
+    font-size: var(--small-font-size);
+    gap: .4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.user-nav-info {
+    align-items: center;
+    gap: .75rem;
+}
+
+.user-greeting {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: 1.5px solid var(--first-color);
+    color: var(--first-color);
+    padding: .4rem .85rem;
+}
+
+.logout-btn:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+/*=============== AUTH OVERLAY ===============*/
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    background: hsla(0, 0%, 0%, 0.55);
+    backdrop-filter: blur(3px);
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease;
+}
+
+.auth-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*=============== AUTH MODAL ===============*/
+.auth-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%) scale(.96);
+    z-index: 300;
+    background: var(--container-color);
+    border-radius: 1.25rem;
+    width: min(440px, 94vw);
+    padding: 2.25rem 2rem 2rem;
+    box-shadow: 0 20px 60px hsla(0, 0%, 0%, .25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+.auth-modal.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.auth-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color-light);
+    line-height: 1;
+    transition: color .2s;
+}
+
+.auth-modal__close:hover {
+    color: var(--first-color);
+}
+
+/*-- Tabs --*/
+.auth-modal__tabs {
+    display: flex;
+    background: var(--first-color-lighten);
+    border-radius: .75rem;
+    padding: .25rem;
+    margin-bottom: 1.5rem;
+}
+
+.dark-theme .auth-modal__tabs {
+    background: hsla(var(--hue), 8%, 25%, 0.5);
+}
+
+.auth-tab {
+    flex: 1;
+    padding: .55rem 0;
+    border: none;
+    border-radius: .6rem;
+    background: transparent;
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    color: var(--text-color-light);
+    cursor: pointer;
+    transition: background .25s, color .25s;
+}
+
+.auth-tab.active {
+    background: var(--first-color);
+    color: #fff;
+    box-shadow: 0 2px 8px hsla(var(--hue), 24%, 32%, .35);
+}
+
+/*-- Header --*/
+.auth-modal__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-modal__icon {
+    font-size: 2.25rem;
+    color: var(--first-color);
+    background: var(--first-color-lighten);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .6rem;
+}
+
+.dark-theme .auth-modal__icon {
+    background: hsla(var(--hue), 24%, 32%, .25);
+}
+
+.auth-modal__title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: .2rem;
+}
+
+.auth-modal__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+/*-- Fields --*/
+.auth-field {
+    position: relative;
+    margin-bottom: 1.1rem;
+}
+
+.auth-input {
+    width: 100%;
+    padding: .85rem 2.5rem .85rem .9rem;
+    border: 1.5px solid var(--first-color-lighten);
+    border-radius: .65rem;
+    background: var(--body-color);
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    outline: none;
+    transition: border-color .2s;
+    box-sizing: border-box;
+}
+
+.auth-input:focus {
+    border-color: var(--first-color);
+}
+
+.auth-label {
+    position: absolute;
+    left: .9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    pointer-events: none;
+    transition: top .2s, font-size .2s, color .2s;
+    background: var(--body-color);
+    padding: 0 .25rem;
+}
+
+.auth-input:focus ~ .auth-label,
+.auth-input:not(:placeholder-shown) ~ .auth-label {
+    top: 0;
+    font-size: .72rem;
+    color: var(--first-color);
+}
+
+.auth-eye {
+    position: absolute;
+    right: .75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-color-light);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+    line-height: 1;
+}
+
+.auth-eye:hover {
+    color: var(--first-color);
+}
+
+/*-- Error --*/
+.auth-error {
+    color: hsl(0, 70%, 50%);
+    font-size: var(--smaller-font-size);
+    margin: -.5rem 0 .75rem;
+    display: none;
+}
+
+/*-- Submit --*/
+.auth-submit {
+    width: 100%;
+    justify-content: center;
+    padding: .85rem;
+    margin-top: .25rem;
+    font-size: var(--normal-font-size);
+    border: none;
+    cursor: pointer;
+    gap: .5rem;
+}
+
+.auth-submit:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+/*-- Switch link --*/
+.auth-switch {
+    text-align: center;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-top: 1.1rem;
+}
+
+.auth-switch a {
+    color: var(--first-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/*-- Textarea label fix --*/
+.auth-field textarea ~ .auth-label {
+    top: .85rem;
+    transform: none;
+}
+
+@media screen and (max-width: 400px) {
+    .auth-modal {
+        padding: 1.75rem 1.25rem 1.5rem;
+    }
+}
