@@ -221,7 +221,7 @@ function createProductCard(product) {
     
     // const imageUrl = product.imageUrl || "https://via.placeholder.com/80?text=No+Image";
     const imageUrl = product.imageUrl 
-    ? `http://localhost:8080${product.imageUrl}` 
+    ? product.imageUrl 
     : "https://via.placeholder.com/80?text=No+Image";
     
     card.innerHTML = `
