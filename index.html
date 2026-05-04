@@ -13,7 +13,6 @@
 <body>
     <div id="toast" class="toast"></div>
 
-    <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
@@ -28,7 +27,7 @@
                     <li class="nav__item"><a href="#faqs" class="nav__link">FAQs</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
 
-                    <!-- ADMIN LINK -->
+                   
                     <li class="nav__item" id="admin-link" style="display:none;">
                         <a href="admin.html" class="nav__link">Admin</a>
                     </li>
@@ -42,18 +41,8 @@
             <div class="nav__btns">
                 <i class="ri-moon-line change-theme" id="theme-button"></i>
 
-                <!-- AUTH BUTTON -->
-                <div id="auth-nav-area">
-                    <button class="button button--flex auth-nav-btn" id="open-login-btn" onclick="openAuthModal('login')">
-                        <i class="ri-user-line"></i> Login
-                    </button>
-                    <div class="user-nav-info" id="user-nav-info" style="display:none;">
-                        <span class="user-greeting" id="user-greeting"></span>
-                        <button class="button button--flex auth-nav-btn logout-btn" onclick="logoutUser()">
-                            <i class="ri-logout-box-line"></i> Logout
-                        </button>
-                    </div>
-                </div>
+                
+                
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
@@ -68,7 +57,6 @@
         <section class="home" id="home">
             <div class="home__container container grid">
                 <img src="assets/images/Shiva.jpg" alt="" class="home__img">
-
                 <div class="home__data">
                     <h1 class="home__title">Explore the Elegance of Godly Creations</h1>
                     <p class="home__description">
@@ -84,7 +72,7 @@
             </div>
         </section>
 
-        <!-- ABOUT -->
+       
         <section class="about section container" id="about">
             <div class="about__container grid">
                 <img src="assets/images/krishna.jpg" alt="" class="about__img">
@@ -101,7 +89,7 @@
             </div>
         </section>
 
-        <!-- PRODUCTS -->
+       
         <section class="product section container" id="products">
             <h2 class="section__title-center">Check out our products</h2>
             <p class="product__description">
@@ -109,11 +97,11 @@
             </p>
 
             <div class="product__container grid" id="product-container">
-                <!-- Products will load dynamically from backend -->
+                
             </div>
         </section>
 
-        <!-- FAQ -->
+       
         <section class="questions section" id="faqs">
             <h2 class="section__title-center questions__title container">
                 Some common questions were often asked
@@ -200,7 +188,7 @@
             </div>
         </section>
 
-        <!-- CONTACT -->
+      
         <section class="contact section container" id="contact">
             <div class="contact__container grid">
 
@@ -239,7 +227,7 @@
 
     </main>
 
-    <!-- FOOTER -->
+   
     <footer class="footer section">
         <div class="footer__container container grid">
             <div class="footer__content">
@@ -257,95 +245,18 @@
         </div>
     </footer>
 
-    <!-- SCROLL UP -->
+   
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-fill scrollup__icon"></i>
     </a>
 
-    <!-- AUTH OVERLAY -->
-    <div class="auth-overlay" id="auth-overlay" onclick="closeAuthModal()"></div>
+    
+    
 
-    <!-- AUTH MODAL -->
-    <div class="auth-modal" id="auth-modal" role="dialog" aria-modal="true" aria-label="Authentication">
-        <button class="auth-modal__close" onclick="closeAuthModal()" aria-label="Close">
-            <i class="ri-close-line"></i>
-        </button>
+    
+   
 
-        <!-- Tabs -->
-        <div class="auth-modal__tabs">
-            <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Login</button>
-            <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">Sign Up</button>
-        </div>
 
-        <!-- LOGIN FORM -->
-        <div class="auth-form" id="form-login">
-            <div class="auth-modal__header">
-                <i class="ri-user-line auth-modal__icon"></i>
-                <h2 class="auth-modal__title">Welcome Back</h2>
-                <p class="auth-modal__subtitle">Sign in to your account</p>
-            </div>
-            <form id="login-form" onsubmit="handleLogin(event)">
-                <div class="auth-field">
-                    <input type="email" id="login-email" class="auth-input" placeholder=" " required>
-                    <label class="auth-label">Email Address</label>
-                </div>
-                <div class="auth-field">
-                    <input type="password" id="login-password" class="auth-input" placeholder=" " required>
-                    <label class="auth-label">Password</label>
-                    <button type="button" class="auth-eye" onclick="togglePassword('login-password', this)" tabindex="-1">
-                        <i class="ri-eye-off-line"></i>
-                    </button>
-                </div>
-                <p class="auth-error" id="login-error"></p>
-                <button type="submit" class="button button--flex auth-submit" id="login-btn">
-                    <span>Sign In</span>
-                    <i class="ri-arrow-right-line button__icon"></i>
-                </button>
-            </form>
-            <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('signup'); return false;">Sign Up</a></p>
-        </div>
-
-        <!-- SIGNUP FORM -->
-        <div class="auth-form" id="form-signup" style="display:none;">
-            <div class="auth-modal__header">
-                <i class="ri-user-add-line auth-modal__icon"></i>
-                <h2 class="auth-modal__title">Create Account</h2>
-                <p class="auth-modal__subtitle">Join Soni Finearts today</p>
-            </div>
-            <form id="signup-form" onsubmit="handleSignup(event)">
-                <div class="auth-field">
-                    <input type="text" id="signup-name" class="auth-input" placeholder=" " required>
-                    <label class="auth-label">Full Name</label>
-                </div>
-                <div class="auth-field">
-                    <input type="email" id="signup-email" class="auth-input" placeholder=" " required>
-                    <label class="auth-label">Email Address</label>
-                </div>
-                <div class="auth-field">
-                    <input type="password" id="signup-password" class="auth-input" placeholder=" " required minlength="6">
-                    <label class="auth-label">Password</label>
-                    <button type="button" class="auth-eye" onclick="togglePassword('signup-password', this)" tabindex="-1">
-                        <i class="ri-eye-off-line"></i>
-                    </button>
-                </div>
-                <div class="auth-field">
-                    <input type="password" id="signup-confirm" class="auth-input" placeholder=" " required minlength="6">
-                    <label class="auth-label">Confirm Password</label>
-                    <button type="button" class="auth-eye" onclick="togglePassword('signup-confirm', this)" tabindex="-1">
-                        <i class="ri-eye-off-line"></i>
-                    </button>
-                </div>
-                <p class="auth-error" id="signup-error"></p>
-                <button type="submit" class="button button--flex auth-submit" id="signup-btn">
-                    <span>Create Account</span>
-                    <i class="ri-arrow-right-line button__icon"></i>
-                </button>
-            </form>
-            <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login'); return false;">Sign In</a></p>
-        </div>
-    </div>
-
-    <!-- JS -->
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/auth.js"></script>
